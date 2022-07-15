@@ -2,6 +2,7 @@ package com.activos.Controller;
 
 import com.activos.Entity.Empresa;
 import com.activos.Entity.Persona;
+import com.activos.Entity.Request;
 import com.activos.Service.ReferenciaLaboralService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Optional;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/ReferenciaLaboral")
@@ -30,11 +32,11 @@ public class ReferenciaLaboralController {
       return new ResponseEntity(persona, HttpStatus.OK);
     }
 
-    @GetMapping("/Empresa/{id}")
-    public ResponseEntity<List<Empresa>> getEmpresa(@PathVariable("id") String name ){
-        System.out.println(name);
-        List<Empresa> empresa= referenciaLaboralService.getById(name);
-        System.out.println(empresa.get(0).getEMP_ND());
+    @GetMapping("/Empresa")
+    public ResponseEntity<List<Empresa>> getEmpresa(@RequestBody Request request ){
+        System.out.println(request);
+        List<Empresa> empresa= referenciaLaboralService.getById(request);
+
         return new ResponseEntity(empresa, HttpStatus.OK);
     }
 

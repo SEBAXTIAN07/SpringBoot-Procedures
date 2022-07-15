@@ -13,55 +13,71 @@ import java.awt.*;
 public class Empresa {
 
     @Id
-    private String TDC_TD;
-    private Integer EMP_ND;
-    private Integer EMP_DV;
-    private String EMP_NOMBRE;
-    private String ATE_CODIGO;
+    private String ID;
+    
+    private String NOMBRE;
+    private String ESTADO_CONTRATO;
+    private String FECHA_DE_INICIO;
+    private String FECHA_FINAL;
+    private String CARGO;
+    private String SALARIO;
 
+    public String getID() {
+        return ID;
+    }
 
+    public void setID(String ID) {
+        this.ID = ID;
+    }
 
+    public String getNOMBRE() {
+        return NOMBRE;
+    }
+
+    public void setNOMBRE(String NOMBRE) {
+        this.NOMBRE = NOMBRE;
+    }
+
+    public String getESTADO_CONTRATO() {
+        return ESTADO_CONTRATO;
+    }
+
+    public void setESTADO_CONTRATO(String ESTADO_CONTRATO) {
+        this.ESTADO_CONTRATO = ESTADO_CONTRATO;
+    }
+
+    public String getFECHA_DE_INICIO() {
+        return FECHA_DE_INICIO;
+    }
+
+    public void setFECHA_DE_INICIO(String FECHA_DE_INICIO) {
+        this.FECHA_DE_INICIO = FECHA_DE_INICIO;
+    }
+
+    public String getFECHA_FINAL() {
+        return FECHA_FINAL;
+    }
+
+    public void setFECHA_FINAL(String FECHA_FINAL) {
+        this.FECHA_FINAL = FECHA_FINAL;
+    }
+
+    public String getCARGO() {
+        return CARGO;
+    }
+
+    public void setCARGO(String CARGO) {
+        this.CARGO = CARGO;
+    }
+
+    public String getSALARIO() {
+        return SALARIO;
+    }
+
+    public void setSALARIO(String SALARIO) {
+        this.SALARIO = SALARIO;
+    }
 
     public Empresa() {
-    }
-
-    public String getTDC_TD() {
-        return TDC_TD;
-    }
-
-    public void setTDC_TD(String TDC_TD) {
-        this.TDC_TD = TDC_TD;
-    }
-
-    public Integer getEMP_ND() {
-        return EMP_ND;
-    }
-
-    public void setEMP_ND(Integer EMP_ND) {
-        this.EMP_ND = EMP_ND;
-    }
-
-    public Integer getEMP_DV() {
-        return EMP_DV;
-    }
-
-    public void setEMP_DV(Integer EMP_DV) {
-        this.EMP_DV = EMP_DV;
-    }
-
-    public String getEMP_NOMBRE() {
-        return EMP_NOMBRE;
-    }
-
-    public void setEMP_NOMBRE(String EMP_NOMBRE) {
-        this.EMP_NOMBRE = EMP_NOMBRE;
-    }
-
-    public String getATE_CODIGO() {
-        return ATE_CODIGO;
-    }
-
-    public void setATE_CODIGO(String ATE_CODIGO) {
-        this.ATE_CODIGO = ATE_CODIGO;
     }
 }
